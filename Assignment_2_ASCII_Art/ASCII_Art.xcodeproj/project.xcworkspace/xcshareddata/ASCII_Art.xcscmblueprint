@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "E6189CA1DA50C9EAFE6659855E45C1F2EE401BCD",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "E6189CA1DA50C9EAFE6659855E45C1F2EE401BCD" : 9223372036854775807,
+    "141FEF354F7B9326A2EA3188468C8AB39CF80EB9" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "62467FA8-5F1C-4DFF-A314-63E2CD1EA3A5",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "E6189CA1DA50C9EAFE6659855E45C1F2EE401BCD" : "SMU_Viz2\/",
+    "141FEF354F7B9326A2EA3188468C8AB39CF80EB9" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "ASCII_Art",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Assignment_2_ASCII_Art\/ASCII_Art.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/aclarkData\/aclarkData.github.io.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "141FEF354F7B9326A2EA3188468C8AB39CF80EB9"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/aclarkData\/SMU_Viz2.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "E6189CA1DA50C9EAFE6659855E45C1F2EE401BCD"
+    }
+  ]
+}
