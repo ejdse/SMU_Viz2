@@ -1,3 +1,4 @@
 ﻿  rls_tic.cpp
-  TextGame.vcxproj -> C:\Users\ryan.shuhart\Box Sync\SMU\Class Work\_Spring 2017\Viz2 - MSDS 6391\Assignments\Andrew\SMU_Viz2\Assignment_3_TextGame\rls_version\TextGame\Debug\TextGame.exe
-  TextGame.vcxproj -> C:\Users\ryan.shuhart\Box Sync\SMU\Class Work\_Spring 2017\Viz2 - MSDS 6391\Assignments\Andrew\SMU_Viz2\Assignment_3_TextGame\rls_version\TextGame\Debug\TextGame.pdb (Partial PDB)
+c:\users\ryan.shuhart\box sync\smu\class work\_spring 2017\viz2 - msds 6391\assignments\andrew\smu_viz2\assignment_3_textgame\rls_version\textgame\textgame\rls_tic.cpp(27): error C3867: 'GameSquares::getSquares': non-standard syntax; use '&' to create a pointer to member
+c:\users\ryan.shuhart\box sync\smu\class work\_spring 2017\viz2 - msds 6391\assignments\andrew\smu_viz2\assignment_3_textgame\rls_version\textgame\textgame\rls_tic.cpp(58): error C3867: 'GameSquares::getSquares': non-standard syntax; use '&' to create a pointer to member
+c:\users\ryan.shuhart\box sync\smu\class work\_spring 2017\viz2 - msds 6391\assignments\andrew\smu_viz2\assignment_3_textgame\rls_version\textgame\textgame\rls_tic.cpp(105): error C3867: 'GameSquares::getSquares': non-standard syntax; use '&' to create a pointer to member

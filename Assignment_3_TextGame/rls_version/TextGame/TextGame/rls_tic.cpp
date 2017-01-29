@@ -5,15 +5,27 @@
 #include <iostream>
 using namespace std;
 
-class GameStatus {
-protected:
+class GameSquares {
+public: 
+	void setSquares(char x) {
+		square[10] = x;
+	}
+
+	char getSquares() {
+		return square[10];
+	}
+
+private:
 	char square[10] = { 'o','1','2','3','4','5','6','7','8','9' };
 };
 
-class GameBoard : public GameStatus {
+class GameBoard : public GameSquares {
 public:
 	void board()
 	{
+		GameSquares squares;
+				char square[10] = squares.getSquares;
+
 		system("cls");
 		cout << "\n\n\tTic Tac Toe\n\n";
 
@@ -37,11 +49,16 @@ public:
 	}
 };
 
-class CheckWinner : public GameStatus {
+class CheckWinner : public GameSquares {
 
 public:
 	int checkwin()
 	{
+		GameSquares squares;
+		char square[10] = squares.getSquares;
+
+		cout << "What checkwin sees: " << square;
+
 		if (square[1] == square[2] && square[2] == square[3])
 
 			return 1;
@@ -83,6 +100,8 @@ public:
 	{
 		GameBoard board;
 		CheckWinner checkwin;
+		GameSquares squares;
+		char square[10] = squares.getSquares;
 		
 		int player = 1, i, choice;
 
@@ -132,9 +151,15 @@ public:
 				cin.ignore();
 				cin.get();
 			}
+			squares.setSquares(square[10]);
 			i = checkwin.checkwin();
 
 			player++;
+
+			cout << square;
+			float x = 0;
+			cin >> x;
+
 		} while (i == -1);
 		board.board();
 		if (i == 1)
