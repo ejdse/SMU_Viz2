@@ -5,6 +5,8 @@
 #include <iostream>
 using namespace std;
 
+// GameSquares is a class with getters and setters to allow the other classes to get or 
+//  set/replace the numbers with an X or O
 class GameSquares {
 public: 
 	void setSquares(char x) {
@@ -19,6 +21,8 @@ private:
 	char square[10] = { 'o','1','2','3','4','5','6','7','8','9' };
 };
 
+
+// The non-GUI UI
 class GameBoard : public GameSquares {
 public:
 	void board()
@@ -49,9 +53,16 @@ public:
 	}
 };
 
-class CheckWinner : public GameSquares {
 
+// Check to see if the right comb gives a winner
+class CheckWinner : public GameSquares {
 public:
+	/*********************************************
+	FUNCTION TO RETURN GAME STATUS
+	1 FOR GAME IS OVER WITH RESULT
+	-1 FOR GAME IS IN PROGRESS
+	O GAME IS OVER AND NO RESULT
+	**********************************************/
 	int checkwin()
 	{
 		GameSquares squares;
@@ -93,6 +104,7 @@ public:
 	}
 };
 
+// Game play flow
 class Game : public GameBoard {
 public:
 	
@@ -176,30 +188,6 @@ public:
 
 
 int main() {
-	Game ttt;
-	ttt.playGame();
+	Game ticTacToe;
+	ticTacToe.playGame();
 }
-
-
-
-/*********************************************
-
-FUNCTION TO RETURN GAME STATUS
-1 FOR GAME IS OVER WITH RESULT
--1 FOR GAME IS IN PROGRESS
-O GAME IS OVER AND NO RESULT
-**********************************************/
-
-
-
-
-/*******************************************************************
-FUNCTION TO DRAW BOARD OF TIC TAC TOE WITH PLAYERS MARK
-********************************************************************/
-
-
-
-
-//*******************************************************************
-//				END OF PROJECT
-//*******************************************************
