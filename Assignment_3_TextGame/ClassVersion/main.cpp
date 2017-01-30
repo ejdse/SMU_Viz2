@@ -1,7 +1,9 @@
 #include "Board.h"
 
 int main(){
-  Board* b = new Board();
+  Board b = Board();
+  b.board();
+
 
   return 0;
 }
