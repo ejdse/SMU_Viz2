@@ -5,10 +5,6 @@
 
 #include "Board.h"
 
-Board::Board(char square[10]){
-  this->square[10] = square[10];
-};
-
 void Board::draw(){
   system("cls");
   cout << "\n\n\tTic Tac Toe Game Using C++ Classes\n\n";

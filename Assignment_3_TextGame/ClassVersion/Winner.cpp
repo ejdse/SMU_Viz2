@@ -1,10 +1,7 @@
-#Winner.h
+#include "Winner.h"
 
-Winner::Winner(int m){
-  this->m = m;
-}
 
-void Winner::check(){
+int Winner::check(){
 
   	if (square[1] == square[2] && square[2] == square[3])
 
