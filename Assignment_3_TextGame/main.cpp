@@ -1,3 +1,4 @@
+
 /* 
 Assignment 3: Text Game
 
@@ -23,7 +24,7 @@ class Board {
 		void board()
 		//Function that draws the playing board
 		{
-			system("cls");
+			//system("cls");
 			cout << "\n\n\tTwo Player C++ Tic Tac Toe Game\n\n";
 
 			cout << "Player 1 is (X) and Player 2 is (O)" << endl << endl;
