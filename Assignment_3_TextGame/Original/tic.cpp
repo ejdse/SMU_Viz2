@@ -1,13 +1,24 @@
-// Resources:
-// http://www.cppforschool.com/project/tic-tac-toe-project.html
-// http://codereview.stackexchange.com/questions/123200/tic-tac-toe-c
+/* 
+Assignment 3: Text Game
 
-#include <iostream>
-using namespace std;
+Andrew Clark and Ryan Shuhart
+	
+Resources:
+	http://www.cplusplus.com/doc/tutorial/classes/
+http://www.cppforschool.com/project/tic-tac-toe-project.html
+http://codereview.stackexchange.com/questions/123200/tic-tac-toe-c
 
+*/
+
+
+#include <iostream> //Standard library input/output module
+using namespace std; // Declare the standard namespace so we don't have to keep recalling
+
+// Board array
 char square[10] = {'o','1','2','3','4','5','6','7','8','9'};
 
-int checkwin();
+// Call functions
+int checkwin(); 
 void board();
 
 int main()
@@ -20,7 +31,7 @@ int main()
 		board();
 		player=(player%2)?1:2;
 
-		cout << "Player " << player << ", enter a number:  ";
+		cout << "Player " << player << ", enter a number for your next move:  ";
 		cin >> choice;
 
 		mark=(player == 1) ? 'X' : 'O';
@@ -76,15 +87,11 @@ int main()
 	return 0;
 }
 
-/*********************************************
-
-	FUNCTION TO RETURN GAME STATUS
-	1 FOR GAME IS OVER WITH RESULT
-	-1 FOR GAME IS IN PROGRESS
-	O GAME IS OVER AND NO RESULT
-**********************************************/
 
 int checkwin()
+/* Function that returns the game status, 1 for game over with a win/loss,
+0 for draw, and -1 for WIP.
+*/
 {
 	if (square[1] == square[2] && square[2] == square[3])
 
@@ -120,35 +127,30 @@ int checkwin()
 }
 
 
-/*******************************************************************
-     FUNCTION TO DRAW BOARD OF TIC TAC TOE WITH PLAYERS MARK
-********************************************************************/
-
 
 void board()
+//Function that draws the playing board
 {
 	system("cls");
-	cout << "\n\n\tTic Tac Toe\n\n";
+	cout << "\n\n\tTwo Player C++ Tic Tac Toe Game\n\n";
 
-	cout << "Player 1 (X)  -  Player 2 (O)" << endl << endl;
+	cout << "Player 1 is (X) and Player 2 is (O)" << endl << endl;
 	cout << endl;
 
-	cout << "     |     |     " << endl;
-	cout << "  " << square[1] << "  |  " << square[2] << "  |  " << square[3] << endl;
+	cout << "###################" << endl;
+	cout << "#     |     |     #" << endl;
+	cout << "#  " << square[1] << "  |  " << square[2] << "  |  " << square[3] << "  #" << endl;
 
-	cout << "_____|_____|_____" << endl;
-	cout << "     |     |     " << endl;
+	cout << "#_____|_____|_____#" << endl;
+	cout << "#     |     |     #" << endl;
 
-	cout << "  " << square[4] << "  |  " << square[5] << "  |  " << square[6] << endl;
+	cout << "#  " << square[4] << "  |  " << square[5] << "  |  " << square[6] << "  #" << endl;
 
-	cout << "_____|_____|_____" << endl;
-	cout << "     |     |     " << endl;
+	cout << "#_____|_____|_____#" << endl;
+	cout << "#     |     |     #" << endl;
 
-	cout << "  " << square[7] << "  |  " << square[8] << "  |  " << square[9] << endl;
+	cout << "#  " << square[7] << "  |  " << square[8] << "  |  " << square[9] << "  #"<< endl;
 
-	cout << "     |     |     " << endl << endl;
+	cout << "#     |     |     #" << endl;
+	cout << "###################" << endl << endl;;
 }
-
-//*******************************************************************
-//				END OF PROJECT
-//*******************************************************
