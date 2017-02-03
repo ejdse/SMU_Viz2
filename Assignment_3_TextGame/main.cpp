@@ -11,16 +11,30 @@ http://codereview.stackexchange.com/questions/123200/tic-tac-toe-c
 
 */
 
-// classes example
+
+// players in the board 
+
+//board.start()
+// logic inside the board 
+
+// everything in board class? composition model 
+
 #include <iostream>
 using namespace std;
 
 // Board array
-char square[10] = {'o','1','2','3','4','5','6','7','8','9'};
+
 
 class Board {
 	
-	public:
+	public:		
+		Engine e;
+		char square[10] = { 'o','1','2','3','4','5','6','7','8','9' };
+
+		Board() {
+			e = Engine(square);
+		}
+
 		void board()
 		//Function that draws the playing board
 		{
@@ -48,12 +62,17 @@ class Board {
 			cout << "###################" << endl << endl;;
 		}
 
-	
-	
 };
 
 class Engine {
 	public:
+		char* square;
+
+		Engine() {};
+
+		Engine(char* boardData):square(boardData) {};
+
+		
 		int checkwin()
 		/* Function that returns the game status, 1 for game over with a win/loss,
 		0 for draw, and -1 for WIP.
@@ -92,75 +111,51 @@ class Engine {
 				return -1;
 		}
 
+		int checkSomething(int choice){
+
+			mark = (player == 1) ? 'X' : 'O';
+
+			if (choice == 1 && square[1] == '1')
+
+			square[1] = mark;
+			else if (choice == 2 && square[2] == '2')
+
+				square[2] = mark;
+			else if (choice == 3 && square[3] == '3')
+
+				square[3] = mark;
+			else if (choice == 4 && square[4] == '4')
+
+				square[4] = mark;
+			else if (choice == 5 && square[5] == '5')
+
+				square[5] = mark;
+			else if (choice == 6 && square[6] == '6')
+
+				square[6] = mark;
+			else if (choice == 7 && square[7] == '7')
+
+				square[7] = mark;
+			else if (choice == 8 && square[8] == '8')
+
+				square[8] = mark;
+			else if (choice == 9 && square[9] == '9')
+
+				square[9] = mark;
+			else
+			{
+				cout << "Invalid move ";
+
+				player--;
+				cin.ignore();
+				cin.get();
+			}
+
+
+		}
+
 }; 
 
-
-//class Logic {
-//	public:
-//		int player = 1,i,choice;
-//
-//		char mark;
-//		do
-//		{
-//			b.board();
-//			player=(player%2)?1:2;
-//
-//			cout << "Player " << player << ", enter a number for your next move:  ";
-//			cin >> choice;
-//
-//			mark=(player == 1) ? 'X' : 'O';
-//
-//			if (choice == 1 && square[1] == '1')
-//
-//				square[1] = mark;
-//			else if (choice == 2 && square[2] == '2')
-//
-//				square[2] = mark;
-//			else if (choice == 3 && square[3] == '3')
-//
-//				square[3] = mark;
-//			else if (choice == 4 && square[4] == '4')
-//
-//				square[4] = mark;
-//			else if (choice == 5 && square[5] == '5')
-//
-//				square[5] = mark;
-//			else if (choice == 6 && square[6] == '6')
-//
-//				square[6] = mark;
-//			else if (choice == 7 && square[7] == '7')
-//
-//				square[7] = mark;
-//			else if (choice == 8 && square[8] == '8')
-//
-//				square[8] = mark;
-//			else if (choice == 9 && square[9] == '9')
-//
-//				square[9] = mark;
-//			else
-//			{
-//				cout<<"Invalid move ";
-//
-//				player--;
-//				cin.ignore();
-//				cin.get();
-//			}
-//			i=eng.checkwin();
-//
-//			player++;
-//		}while(i==-1);
-//		b.board();
-//		if(i==1)
-//
-//			cout<<"==>\aPlayer "<<--player<<" win ";
-//		else
-//			cout<<"==>\aGame draw";
-//
-//		cin.ignore();
-//		cin.get();
-//		return 0;
-//		
-//};
 
 
 int main()
@@ -183,43 +178,8 @@ int main()
 		cout << "Player " << player << ", enter a number for your next move:  ";
 		cin >> choice;
 
-		mark=(player == 1) ? 'X' : 'O';
+		
 
-		if (choice == 1 && square[1] == '1')
-
-			square[1] = mark;
-		else if (choice == 2 && square[2] == '2')
-
-			square[2] = mark;
-		else if (choice == 3 && square[3] == '3')
-
-			square[3] = mark;
-		else if (choice == 4 && square[4] == '4')
-
-			square[4] = mark;
-		else if (choice == 5 && square[5] == '5')
-
-			square[5] = mark;
-		else if (choice == 6 && square[6] == '6')
-
-			square[6] = mark;
-		else if (choice == 7 && square[7] == '7')
-
-			square[7] = mark;
-		else if (choice == 8 && square[8] == '8')
-
-			square[8] = mark;
-		else if (choice == 9 && square[9] == '9')
-
-			square[9] = mark;
-		else
-		{
-			cout<<"Invalid move ";
-
-			player--;
-			cin.ignore();
-			cin.get();
-		}
 		i=eng.checkwin();
 
 		player++;
