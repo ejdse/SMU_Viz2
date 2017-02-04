@@ -5,31 +5,15 @@
 #include <iostream>
 using namespace std;
 
-// GameSquares is a class with getters and setters to allow the other classes to get or 
-//  set/replace the numbers with an X or O
-class GameSquares {
-public: 
-	void setSquares(char x) {
-		square = x;
-	}
-
-	char *getSquares() {
-		return square;
-	}
-
-private:
+class GameStatus {
+protected:
 	char square[10] = { 'o','1','2','3','4','5','6','7','8','9' };
 };
 
-
-// The non-GUI UI
-class GameBoard : public GameSquares {
+class GameBoard : public GameStatus {
 public:
 	void board()
 	{
-		GameSquares squares;
-				char square[10] = squares.getSquares;
-
 		system("cls");
 		cout << "\n\n\tTic Tac Toe\n\n";
 
@@ -53,23 +37,11 @@ public:
 	}
 };
 
+class CheckWinner : public GameStatus {
 
-// Check to see if the right comb gives a winner
-class CheckWinner : public GameSquares {
 public:
-	/*********************************************
-	FUNCTION TO RETURN GAME STATUS
-	1 FOR GAME IS OVER WITH RESULT
-	-1 FOR GAME IS IN PROGRESS
-	O GAME IS OVER AND NO RESULT
-	**********************************************/
 	int checkwin()
 	{
-		GameSquares squares;
-		char square[10] = squares.getSquares;
-
-		cout << "What checkwin sees: " << square;
-
 		if (square[1] == square[2] && square[2] == square[3])
 
 			return 1;
@@ -104,7 +76,6 @@ public:
 	}
 };
 
-// Game play flow
 class Game : public GameBoard {
 public:
 	
@@ -112,8 +83,6 @@ public:
 	{
 		GameBoard board;
 		CheckWinner checkwin;
-		GameSquares squares;
-		char square[10] = squares.getSquares;
 		
 		int player = 1, i, choice;
 
@@ -163,19 +132,9 @@ public:
 				cin.ignore();
 				cin.get();
 			}
-
-			//remember squares
-			squares.setSquares(square);
-
-			// check if winning combo
 			i = checkwin.checkwin();
 
 			player++;
-
-			cout << square;
-			float x = 0;
-			cin >> x;
-
 		} while (i == -1);
 		board.board();
 		if (i == 1)
@@ -192,6 +151,30 @@ public:
 
 
 int main() {
-	Game ticTacToe;
-	ticTacToe.playGame();
+	Game ttt;
+	ttt.playGame();
 }
+
+
+
+/*********************************************
+
+FUNCTION TO RETURN GAME STATUS
+1 FOR GAME IS OVER WITH RESULT
+-1 FOR GAME IS IN PROGRESS
+O GAME IS OVER AND NO RESULT
+**********************************************/
+
+
+
+
+/*******************************************************************
+FUNCTION TO DRAW BOARD OF TIC TAC TOE WITH PLAYERS MARK
+********************************************************************/
+
+
+
+
+//*******************************************************************
+//				END OF PROJECT
+//*******************************************************
