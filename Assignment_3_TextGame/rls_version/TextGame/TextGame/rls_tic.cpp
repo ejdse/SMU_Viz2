@@ -1,6 +1,14 @@
-// Resources:
-// http://www.cppforschool.com/project/tic-tac-toe-project.html
-// http://codereview.stackexchange.com/questions/123200/tic-tac-toe-c
+/*
+Assignment 3: Text Game
+
+Andrew Clark and Ryan Shuhart
+
+Resources:
+http://www.cplusplus.com/doc/tutorial/classes/
+http://www.cppforschool.com/project/tic-tac-toe-project.html
+http://codereview.stackexchange.com/questions/123200/tic-tac-toe-c
+
+*/
 
 #include <iostream>
 using namespace std;

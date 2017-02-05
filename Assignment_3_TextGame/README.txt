@@ -1,0 +1,1 @@
+Ryan and I will continue working with this game for next week, as discussed in class, getting rid of the global array and adding all of the logic to the Engine class. We will also add some visualization with openframeworks as well. 

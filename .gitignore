@@ -1,3 +1,5 @@
 Assignment_3_TextGame/rls_version/TextGame/TextGame.VC.VC.opendb
-Assignment_3_TextGame/rls_version/TextGame/Debug/*
-Assignment_3_TextGame/rls_version/TextGame/TextGame/Debug/*
+Assignment_3_TextGame/rls_version/TextGame/Debug/
+Assignment_3_TextGame/rls_version/TextGame/TextGame/Debug/
+Assignment_3_TextGame/rls_version/TextGame/.vs/
+*.suo

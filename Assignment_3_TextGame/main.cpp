@@ -5,7 +5,7 @@ Assignment 3: Text Game
 Andrew Clark and Ryan Shuhart
 	
 Resources:
-	http://www.cplusplus.com/doc/tutorial/classes/
+http://www.cplusplus.com/doc/tutorial/classes/
 http://www.cppforschool.com/project/tic-tac-toe-project.html
 http://codereview.stackexchange.com/questions/123200/tic-tac-toe-c
 
@@ -14,6 +14,7 @@ http://codereview.stackexchange.com/questions/123200/tic-tac-toe-c
 #include <iostream>
 using namespace std;
 
+<<<<<<< HEAD
 char square[10] = {'o','1','2','3','4','5','6','7','8','9'};
 		
 // Board array
@@ -22,6 +23,107 @@ class Board {
 	
 	public:
 		
+=======
+
+class Engine {
+public:
+	char* square;
+
+	Engine() {};
+
+	Engine(char* boardData) :square(boardData) {};
+
+	void checkSquare(int choice, char mark, int player) {
+
+		if (choice == 1 && square[1] == '1')
+
+			square[1] = mark;
+		else if (choice == 2 && square[2] == '2')
+
+			square[2] = mark;
+		else if (choice == 3 && square[3] == '3')
+
+			square[3] = mark;
+		else if (choice == 4 && square[4] == '4')
+
+			square[4] = mark;
+		else if (choice == 5 && square[5] == '5')
+
+			square[5] = mark;
+		else if (choice == 6 && square[6] == '6')
+
+			square[6] = mark;
+		else if (choice == 7 && square[7] == '7')
+
+			square[7] = mark;
+		else if (choice == 8 && square[8] == '8')
+
+			square[8] = mark;
+		else if (choice == 9 && square[9] == '9')
+
+			square[9] = mark;
+		else
+		{
+			cout << "Invalid move ";
+
+			player--;
+			cin.ignore();
+			cin.get();
+		}
+	}
+
+	int checkwin()
+		/* Function that returns the game status, 1 for game over with a win/loss,
+		0 for draw, and -1 for WIP.
+		*/
+	{
+		if (square[1] == square[2] && square[2] == square[3])
+
+			return 1;
+		else if (square[4] == square[5] && square[5] == square[6])
+
+			return 1;
+		else if (square[7] == square[8] && square[8] == square[9])
+
+			return 1;
+		else if (square[1] == square[4] && square[4] == square[7])
+
+			return 1;
+		else if (square[2] == square[5] && square[5] == square[8])
+
+			return 1;
+		else if (square[3] == square[6] && square[6] == square[9])
+
+			return 1;
+		else if (square[1] == square[5] && square[5] == square[9])
+
+			return 1;
+		else if (square[3] == square[5] && square[5] == square[7])
+
+			return 1;
+		else if (square[1] != '1' && square[2] != '2' && square[3] != '3'
+			&& square[4] != '4' && square[5] != '5' && square[6] != '6'
+			&& square[7] != '7' && square[8] != '8' && square[9] != '9')
+
+			return 0;
+		else
+			return -1;
+	}
+
+};
+
+
+class Board {
+	
+	public:		
+		Engine e;
+		char square[10] = { 'o','1','2','3','4','5','6','7','8','9' };
+
+		Board() {
+			e = Engine(square);
+		}
+
+>>>>>>> 0d2b6e0d58e53ce51b8c36790add38571c59e5b0
 		void board()
 		//Function that draws the playing board
 		{
@@ -49,10 +151,9 @@ class Board {
 			cout << "###################" << endl << endl;;
 		}
 
-	
-	
 };
 
+<<<<<<< HEAD
 class Engine {
 	public:
 		int checkwin()
@@ -96,6 +197,8 @@ class Engine {
 }; 
 
 
+=======
+>>>>>>> 0d2b6e0d58e53ce51b8c36790add38571c59e5b0
 
 int main()
 {
@@ -105,10 +208,9 @@ int main()
 	Board b;
 	b.board();
 	
-	
 	int player = 1,i,choice;
-
 	char mark;
+	
 	do
 	{
 		b.board();
@@ -117,46 +219,16 @@ int main()
 		cout << "Player " << player << ", enter a number for your next move:  ";
 		cin >> choice;
 
-		mark=(player == 1) ? 'X' : 'O';
+		// Determin the mark to place
+		mark = (player == 1) ? 'X' : 'O';
 
-		if (choice == 1 && square[1] == '1')
-
-			square[1] = mark;
-		else if (choice == 2 && square[2] == '2')
-
-			square[2] = mark;
-		else if (choice == 3 && square[3] == '3')
-
-			square[3] = mark;
-		else if (choice == 4 && square[4] == '4')
-
-			square[4] = mark;
-		else if (choice == 5 && square[5] == '5')
-
-			square[5] = mark;
-		else if (choice == 6 && square[6] == '6')
-
-			square[6] = mark;
-		else if (choice == 7 && square[7] == '7')
-
-			square[7] = mark;
-		else if (choice == 8 && square[8] == '8')
-
-			square[8] = mark;
-		else if (choice == 9 && square[9] == '9')
-
-			square[9] = mark;
-		else
-		{
-			cout<<"Invalid move ";
-
-			player--;
-			cin.ignore();
-			cin.get();
-		}
+		//
+		eng.checkSquare(choice, mark, player);
+		
 		i=eng.checkwin();
 
 		player++;
+
 	}while(i==-1);
 	b.board();
 	if(i==1)
@@ -169,6 +241,3 @@ int main()
 	cin.get();
 	return 0;
 }
-
-
-
