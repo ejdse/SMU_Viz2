@@ -2,6 +2,7 @@
 
 #include "ofMain.h"
 
+
 class Board {
     
 public:
@@ -12,6 +13,7 @@ public:
         //Logic	e = Logic(square);
     }
     
-    void board(char* square);
+    void drawB(char* square);
+
     
 };

@@ -1,5 +1,6 @@
 #include "ofApp.h"
 
+
 //--------------------------------------------------------------
 void ofApp::setup(){
     Banana.load("Banana.wav");
@@ -19,6 +20,9 @@ void ofApp::update(){
 void ofApp::draw(){
     //ofSetColor(255);
     Chalkboard.draw(0, 0);
+    float value = 0.2;
+    ofSetColor(ofColor::white);
+    ofDrawBitmapString("value: " + ofToString(value), 10, 10);
     
 }
 

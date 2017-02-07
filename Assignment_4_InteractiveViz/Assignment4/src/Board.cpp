@@ -1,9 +1,9 @@
 #include "Board.h"
 
 //--------------------------------------------------------------
-void Board::board(char* square){
+void Board::drawB(char* square){
     //Function that draws the playing board
-        cout << "\n\n\tTwo Player C++ Tic Tac Toe Game\n\n";
+        ofDrawBitmapString("\n\n\tTwo Player C++ Tic Tac Toe Game\n\n", 500,500);
         
         cout << "Player 1 is (X) and Player 2 is (O)" << endl << endl;
         cout << endl;

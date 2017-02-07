@@ -1,7 +1,8 @@
 #pragma once
 
 #include "ofMain.h"
-#include "ofxGui.h"
+//#include "ofxGui.h"
+#include "Board.h" // include Board class
 
 
 class ofApp : public ofBaseApp{
@@ -28,5 +29,8 @@ class ofApp : public ofBaseApp{
         ofSoundPlayer  UFO;
         ofSoundPlayer  Villain;
         ofImage Chalkboard;
-		
+    
+        void drawB(char* square);
+            Board other; //include board class
+    
 };

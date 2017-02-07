@@ -19,7 +19,7 @@ int main( ){
     Logic eng;
     eng.checkwin(square);
     Board b;
-    b.board(square);
+    b.drawB(square);
     
     int player = 1,i,choice;
     char mark;
@@ -42,7 +42,7 @@ int main( ){
         player++;
         
     }while(i==-1);
-    b.board(square);
+    b.drawB(square);
     if(i==1)
         
         cout<<"==>\aPlayer "<<--player<<" win ";
